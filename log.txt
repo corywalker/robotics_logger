@@ -1,0 +1,14 @@
+WARNING:root:Test 3
+ERROR:root:Test 4
+CRITICAL:root:Test 5
+WARNING:root:Test 3
+ERROR:root:Test 4
+CRITICAL:root:Test 5
+WARNING:root:Test 3
+ERROR:root:Test 4
+CRITICAL:root:Test 5
+DEBUG:root:Test 1
+INFO:root:Test 2
+WARNING:root:Test 3
+ERROR:root:Test 4
+CRITICAL:root:Test 5
