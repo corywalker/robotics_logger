@@ -1,0 +1,5 @@
+*.swp
+*.db
+storage
+*.pyc
+log.txt

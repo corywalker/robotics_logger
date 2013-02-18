@@ -1,6 +1,6 @@
 # handlertest.py
 import logging
-import logging.handlers
+#import logging.handlers
 import irchandler
 
 LOG_FILENAME = "log.txt"
@@ -11,19 +11,18 @@ logger = logging.getLogger()
 
 # A little trickery because, at least for me, directly creating
 # an SMSHandler object didn't work
-logging.handlers.IRCHandler = irchandler.IRCHandler
+logging.handlers.RoboticsHandler = irchandler.RoboticsHandler
 
 # create the handler object
-testHandler = logging.handlers.IRCHandler()
-# Configure the handler to only send SMS for critical errors
-testHandler.setLevel(logging.DEBUG)
+testHandler = logging.handlers.RoboticsHandler(True)
+testHandler.setLevel(logging.INFO)
 
 # and finally we add the handler to the logging object
 logger.addHandler(testHandler)
 
+#logger = irchandler.init_logger(True)
+
 # And finally a test
-logger.debug('Test 1')
-logger.info('Test 2')
-logger.warning('Test 3')
-logger.error('Test 4')
-logger.critical('Test 5')
+while True:
+    logger.info(raw_input())
+    print "logged"
